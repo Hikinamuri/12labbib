@@ -17,7 +17,7 @@ namespace _12labbib
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1(new AppDbContext()));
+            Application.Run(new Form2());
         }
     }
 }

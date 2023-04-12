@@ -9,7 +9,10 @@ namespace _12labbib
 {
     public class AppDbContext : DbContext
     {
-        private const string ConnectionString = "Data Source=(localdb)\\mssqllocaldb;Initial Catalog=LibraryDb;Integrated Security=True;";
+        private const string ConnectionString = "" +
+            "Data Source=(localdb)\\mssqllocaldb;" +
+            "Initial Catalog=LibraryDb;" +
+            "Integrated Security=True;";
         public DbSet<User> Users { get; set; }
         public DbSet<Book> Books { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

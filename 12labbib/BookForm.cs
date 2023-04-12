@@ -20,7 +20,6 @@ namespace _12labbib
         { 
             InitializeComponent();
             _context = new AppDbContext();
-/*            _context = context; */
             _user = user; 
         }
         private void button1_Click(object sender, EventArgs e)
