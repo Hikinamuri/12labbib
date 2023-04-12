@@ -44,12 +44,17 @@
             this.authorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.userIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.booksBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.fillByToolStrip = new System.Windows.Forms.ToolStrip();
+            this.iDToolStripLabel = new System.Windows.Forms.ToolStripLabel();
+            this.iDToolStripTextBox = new System.Windows.Forms.ToolStripTextBox();
+            this.fillByToolStripButton = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.libraryDbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.libraryDbDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.booksBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.booksBindingSource1)).BeginInit();
+            this.fillByToolStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // button1
@@ -140,39 +145,67 @@
             this.titleDataGridViewTextBoxColumn.DataPropertyName = "Title";
             this.titleDataGridViewTextBoxColumn.HeaderText = "Title";
             this.titleDataGridViewTextBoxColumn.Name = "titleDataGridViewTextBoxColumn";
-            this.titleDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // yearDataGridViewTextBoxColumn
             // 
             this.yearDataGridViewTextBoxColumn.DataPropertyName = "Year";
             this.yearDataGridViewTextBoxColumn.HeaderText = "Year";
             this.yearDataGridViewTextBoxColumn.Name = "yearDataGridViewTextBoxColumn";
-            this.yearDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // authorDataGridViewTextBoxColumn
             // 
             this.authorDataGridViewTextBoxColumn.DataPropertyName = "Author";
             this.authorDataGridViewTextBoxColumn.HeaderText = "Author";
             this.authorDataGridViewTextBoxColumn.Name = "authorDataGridViewTextBoxColumn";
-            this.authorDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // userIdDataGridViewTextBoxColumn
             // 
             this.userIdDataGridViewTextBoxColumn.DataPropertyName = "UserId";
             this.userIdDataGridViewTextBoxColumn.HeaderText = "UserId";
             this.userIdDataGridViewTextBoxColumn.Name = "userIdDataGridViewTextBoxColumn";
-            this.userIdDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // booksBindingSource1
             // 
             this.booksBindingSource1.DataMember = "Books";
             this.booksBindingSource1.DataSource = this.libraryDbDataSetBindingSource;
             // 
+            // fillByToolStrip
+            // 
+            this.fillByToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.iDToolStripLabel,
+            this.iDToolStripTextBox,
+            this.fillByToolStripButton});
+            this.fillByToolStrip.Location = new System.Drawing.Point(0, 0);
+            this.fillByToolStrip.Name = "fillByToolStrip";
+            this.fillByToolStrip.Size = new System.Drawing.Size(800, 25);
+            this.fillByToolStrip.TabIndex = 5;
+            this.fillByToolStrip.Text = "fillByToolStrip";
+            // 
+            // iDToolStripLabel
+            // 
+            this.iDToolStripLabel.Name = "iDToolStripLabel";
+            this.iDToolStripLabel.Size = new System.Drawing.Size(21, 22);
+            this.iDToolStripLabel.Text = "ID:";
+            // 
+            // iDToolStripTextBox
+            // 
+            this.iDToolStripTextBox.Name = "iDToolStripTextBox";
+            this.iDToolStripTextBox.Size = new System.Drawing.Size(100, 23);
+            // 
+            // fillByToolStripButton
+            // 
+            this.fillByToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.fillByToolStripButton.Name = "fillByToolStripButton";
+            this.fillByToolStripButton.Size = new System.Drawing.Size(39, 19);
+            this.fillByToolStripButton.Text = "FillBy";
+            this.fillByToolStripButton.Click += new System.EventHandler(this.fillByToolStripButton_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.fillByToolStrip);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button3);
@@ -187,7 +220,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.libraryDbDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.booksBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.booksBindingSource1)).EndInit();
+            this.fillByToolStrip.ResumeLayout(false);
+            this.fillByToolStrip.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -208,5 +244,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn authorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn userIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource booksBindingSource1;
+        private System.Windows.Forms.ToolStrip fillByToolStrip;
+        private System.Windows.Forms.ToolStripLabel iDToolStripLabel;
+        private System.Windows.Forms.ToolStripTextBox iDToolStripTextBox;
+        private System.Windows.Forms.ToolStripButton fillByToolStripButton;
     }
 }

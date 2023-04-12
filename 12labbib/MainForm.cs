@@ -23,7 +23,7 @@ namespace _12labbib
             _user.Books = context?.Books.Where(b => b.UserId == _user.Id).ToList() ?? new List<Book>();
             Text = $"Библиотека пользователя {_user.Name}";
             dataGridView1.AutoGenerateColumns = true;
-            dataGridView1.DataSource = _user.Books;
+            update();
         }
 
 
@@ -33,23 +33,24 @@ namespace _12labbib
             if (bookForm.ShowDialog() == DialogResult.OK)
             {
                 _user.Books.Add(bookForm.Book);
-                dataGridView1.DataSource = null;
-                dataGridView1.DataSource = _user.Books;
+                update();
             }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             DataGridViewRow row = dataGridView2.SelectedRows[0];
-            if (row.DataBoundItem is DataRowView rowView)
-            {
-                int id = Convert.ToInt32(row.Cells["idDataGridViewTextBoxColumn"].Value);
-                var bookToRemove = _context.Books.FirstOrDefault(b => b.Id == id);
-                _context.Books.Remove(bookToRemove);
-                _context.SaveChanges();
-                dataGridView2.DataSource = null;
-                dataGridView2.DataSource = _user.Books;
-            }
+            int id = Convert.ToInt32(row.Cells["idDataGridViewTextBoxColumn"].Value);
+            var bookToRemove = _context.Books.FirstOrDefault(b => b.Id == id);
+            _context.Books.Remove(bookToRemove);
+            _context.SaveChanges();
+            update();
+        }
+
+        private void update()
+        {
+            List<Book> booksWithUserId = _context.Books.Where(b => b.UserId == _user.Id).ToList();
+            dataGridView2.DataSource = booksWithUserId;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -64,5 +65,17 @@ namespace _12labbib
 
         }
 
+        private void fillByToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.booksTableAdapter.FillBy(this.libraryDbDataSet.Books, ((int)(System.Convert.ChangeType(iDToolStripTextBox.Text, typeof(int)))));
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
+
+        }
     }
 }
