@@ -39,7 +39,7 @@ namespace _12labbib
                 else if (dialogResult == DialogResult.No) Show();
             }
             else
-                MessageBox.Show("Нет");
+                MessageBox.Show("Логин или пароль неверны!", "Ошибка");
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
