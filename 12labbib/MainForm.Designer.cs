@@ -32,71 +32,53 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.libraryDbDataSet = new _12labbib.LibraryDbDataSet();
-            this.libraryDbDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.booksBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.booksTableAdapter = new _12labbib.LibraryDbDataSetTableAdapters.BooksTableAdapter();
+            this.booksBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.titleDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.yearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.authorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.userIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.booksBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.fillByToolStrip = new System.Windows.Forms.ToolStrip();
-            this.iDToolStripLabel = new System.Windows.Forms.ToolStripLabel();
-            this.iDToolStripTextBox = new System.Windows.Forms.ToolStripTextBox();
-            this.fillByToolStripButton = new System.Windows.Forms.ToolStripButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.libraryDbDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.libraryDbDataSet = new _12labbib.LibraryDbDataSet();
+            this.booksTableAdapter = new _12labbib.LibraryDbDataSetTableAdapters.BooksTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.libraryDbDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.libraryDbDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.booksBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.booksBindingSource1)).BeginInit();
-            this.fillByToolStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.libraryDbDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.libraryDbDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(518, 75);
+            this.button1.Location = new System.Drawing.Point(560, 59);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(160, 23);
             this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
+            this.button1.Text = "Добавить запись";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(518, 104);
+            this.button2.Location = new System.Drawing.Point(560, 88);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(160, 23);
             this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
+            this.button2.Text = "Удалить запись";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(685, 395);
+            this.button3.Location = new System.Drawing.Point(645, 382);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
+            this.button3.Text = "Выход";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 26);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(485, 392);
-            this.dataGridView1.TabIndex = 3;
             // 
             // dataGridView2
             // 
@@ -109,29 +91,20 @@
             this.authorDataGridViewTextBoxColumn,
             this.userIdDataGridViewTextBoxColumn});
             this.dataGridView2.DataSource = this.booksBindingSource1;
-            this.dataGridView2.Location = new System.Drawing.Point(12, 185);
+            this.dataGridView2.Location = new System.Drawing.Point(12, 12);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(540, 150);
+            this.dataGridView2.Size = new System.Drawing.Size(542, 406);
             this.dataGridView2.TabIndex = 4;
-            // 
-            // libraryDbDataSet
-            // 
-            this.libraryDbDataSet.DataSetName = "LibraryDbDataSet";
-            this.libraryDbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // libraryDbDataSetBindingSource
-            // 
-            this.libraryDbDataSetBindingSource.DataSource = this.libraryDbDataSet;
-            this.libraryDbDataSetBindingSource.Position = 0;
             // 
             // booksBindingSource
             // 
             this.booksBindingSource.DataMember = "Books";
             this.booksBindingSource.DataSource = this.libraryDbDataSetBindingSource;
             // 
-            // booksTableAdapter
+            // booksBindingSource1
             // 
-            this.booksTableAdapter.ClearBeforeFill = true;
+            this.booksBindingSource1.DataMember = "Books";
+            this.booksBindingSource1.DataSource = this.libraryDbDataSetBindingSource;
             // 
             // idDataGridViewTextBoxColumn
             // 
@@ -164,66 +137,39 @@
             this.userIdDataGridViewTextBoxColumn.HeaderText = "UserId";
             this.userIdDataGridViewTextBoxColumn.Name = "userIdDataGridViewTextBoxColumn";
             // 
-            // booksBindingSource1
+            // libraryDbDataSetBindingSource
             // 
-            this.booksBindingSource1.DataMember = "Books";
-            this.booksBindingSource1.DataSource = this.libraryDbDataSetBindingSource;
+            this.libraryDbDataSetBindingSource.DataSource = this.libraryDbDataSet;
+            this.libraryDbDataSetBindingSource.Position = 0;
             // 
-            // fillByToolStrip
+            // libraryDbDataSet
             // 
-            this.fillByToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.iDToolStripLabel,
-            this.iDToolStripTextBox,
-            this.fillByToolStripButton});
-            this.fillByToolStrip.Location = new System.Drawing.Point(0, 0);
-            this.fillByToolStrip.Name = "fillByToolStrip";
-            this.fillByToolStrip.Size = new System.Drawing.Size(800, 25);
-            this.fillByToolStrip.TabIndex = 5;
-            this.fillByToolStrip.Text = "fillByToolStrip";
+            this.libraryDbDataSet.DataSetName = "LibraryDbDataSet";
+            this.libraryDbDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // iDToolStripLabel
+            // booksTableAdapter
             // 
-            this.iDToolStripLabel.Name = "iDToolStripLabel";
-            this.iDToolStripLabel.Size = new System.Drawing.Size(21, 22);
-            this.iDToolStripLabel.Text = "ID:";
-            // 
-            // iDToolStripTextBox
-            // 
-            this.iDToolStripTextBox.Name = "iDToolStripTextBox";
-            this.iDToolStripTextBox.Size = new System.Drawing.Size(100, 23);
-            // 
-            // fillByToolStripButton
-            // 
-            this.fillByToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.fillByToolStripButton.Name = "fillByToolStripButton";
-            this.fillByToolStripButton.Size = new System.Drawing.Size(39, 19);
-            this.fillByToolStripButton.Text = "FillBy";
-            this.fillByToolStripButton.Click += new System.EventHandler(this.fillByToolStripButton_Click);
+            this.booksTableAdapter.ClearBeforeFill = true;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.fillByToolStrip);
+            this.ClientSize = new System.Drawing.Size(727, 450);
             this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MainForm";
             this.Load += new System.EventHandler(this.MainForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.libraryDbDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.libraryDbDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.booksBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.booksBindingSource1)).EndInit();
-            this.fillByToolStrip.ResumeLayout(false);
-            this.fillByToolStrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.libraryDbDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.libraryDbDataSet)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -232,7 +178,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.BindingSource libraryDbDataSetBindingSource;
         private LibraryDbDataSet libraryDbDataSet;
@@ -244,9 +189,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn authorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn userIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource booksBindingSource1;
-        private System.Windows.Forms.ToolStrip fillByToolStrip;
-        private System.Windows.Forms.ToolStripLabel iDToolStripLabel;
-        private System.Windows.Forms.ToolStripTextBox iDToolStripTextBox;
-        private System.Windows.Forms.ToolStripButton fillByToolStripButton;
     }
 }

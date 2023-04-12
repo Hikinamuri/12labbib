@@ -52,7 +52,6 @@ namespace _12labbib
             Form1 registrationForm = new Form1(new AppDbContext()); 
             this.Hide(); 
             registrationForm.ShowDialog(); 
-            Show();
         }
     }
 }
