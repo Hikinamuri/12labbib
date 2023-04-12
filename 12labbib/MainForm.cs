@@ -18,7 +18,7 @@ namespace _12labbib
         public MainForm(AppDbContext context, User user)
         {
             InitializeComponent();
-            _context = context;
+            _context = new AppDbContext();
             _user = user;
             _user.Books = context?.Books.Where(b => b.UserId == _user.Id).ToList() ?? new List<Book>();
             Text = $"Библиотека пользователя {_user.Name}";
@@ -40,19 +40,15 @@ namespace _12labbib
 
         private void button2_Click(object sender, EventArgs e)
         {
-            /* var selectedRow = dataGridView2.SelectedRows[0]; 
-             var book = (Book)selectedRow.DataBoundItem; 
-             _user.Books.Remove(book); 
-             _context.SaveChanges(); 
-             dataGridView2.DataSource = null; 
-             dataGridView2.DataSource = _user.Books;*/
             DataGridViewRow row = dataGridView2.SelectedRows[0];
             if (row.DataBoundItem is DataRowView rowView)
             {
-                int id = Convert.ToInt32(row.Cells["Id"].Value);
+                int id = Convert.ToInt32(row.Cells["idDataGridViewTextBoxColumn"].Value);
                 var bookToRemove = _context.Books.FirstOrDefault(b => b.Id == id);
                 _context.Books.Remove(bookToRemove);
                 _context.SaveChanges();
+                dataGridView2.DataSource = null;
+                dataGridView2.DataSource = _user.Books;
             }
         }
 

@@ -43,11 +43,13 @@
             this.yearDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.authorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.userIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.booksBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.libraryDbDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.libraryDbDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.booksBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.booksBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -101,10 +103,10 @@
             this.yearDataGridViewTextBoxColumn,
             this.authorDataGridViewTextBoxColumn,
             this.userIdDataGridViewTextBoxColumn});
-            this.dataGridView2.DataSource = this.booksBindingSource;
+            this.dataGridView2.DataSource = this.booksBindingSource1;
             this.dataGridView2.Location = new System.Drawing.Point(12, 185);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(544, 150);
+            this.dataGridView2.Size = new System.Drawing.Size(540, 150);
             this.dataGridView2.TabIndex = 4;
             // 
             // libraryDbDataSet
@@ -161,6 +163,11 @@
             this.userIdDataGridViewTextBoxColumn.Name = "userIdDataGridViewTextBoxColumn";
             this.userIdDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // booksBindingSource1
+            // 
+            this.booksBindingSource1.DataMember = "Books";
+            this.booksBindingSource1.DataSource = this.libraryDbDataSetBindingSource;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -179,6 +186,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.libraryDbDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.libraryDbDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.booksBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.booksBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -199,5 +207,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn yearDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn authorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn userIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource booksBindingSource1;
     }
 }
