@@ -20,9 +20,7 @@ namespace _12labbib
             InitializeComponent();
             _context = new AppDbContext();
             _user = user;
-            _user.Books = context?.Books.Where(b => b.UserId == _user.Id).ToList() ?? new List<Book>();
             Text = $"Библиотека пользователя {_user.Name}";
-            dataGridView1.AutoGenerateColumns = true;
             update();
         }
 

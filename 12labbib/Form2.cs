@@ -32,7 +32,7 @@ namespace _12labbib
             {
                 MessageBox.Show("Вы успешно авторизовались!", "Авторизация", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 MainForm mainForm = new MainForm(context, user);
-                Hide();
+                this.Hide();
                 mainForm.ShowDialog();
                 DialogResult dialogResult = MessageBox.Show("Закрыть программу?", "Думай", MessageBoxButtons.YesNo);
                 if (dialogResult == DialogResult.Yes) Close();
