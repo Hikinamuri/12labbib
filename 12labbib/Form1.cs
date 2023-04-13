@@ -27,8 +27,11 @@ namespace _12labbib
         {
             var user = new User{
                 Name = textBox1.Text,
+                Password = textBox2.Text,
+                Surname = textBox3.Text,
+                Phone = textBox4.Text,
                 Email = textBox5.Text,
-                Password = textBox2.Text
+                Profile = textBox6.Text,
             };
             _context.Users.Add(user); 
             _context.SaveChanges();

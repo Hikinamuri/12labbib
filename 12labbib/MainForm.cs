@@ -27,7 +27,7 @@ namespace _12labbib
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var bookForm = new BookForm(_context, _user); 
+            var bookForm = new SaleForm(_context, _user); 
             if (bookForm.ShowDialog() == DialogResult.OK)
             {
                 _user.Books.Add(bookForm.Book);
@@ -47,7 +47,7 @@ namespace _12labbib
 
         private void update()
         {
-            List<Book> booksWithUserId = _context.Books.Where(b => b.UserId == _user.Id).ToList();
+            List<Sales> booksWithUserId = _context.Books.Where(b => b.UserId == _user.Id).ToList();
             dataGridView2.DataSource = booksWithUserId;
         }
 
@@ -58,9 +58,9 @@ namespace _12labbib
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'libraryDbDataSet.Books' table. You can move, or remove it, as needed.
-            this.booksTableAdapter.Fill(this.libraryDbDataSet.Books);
-
+            // TODO: This line of code loads data into the 'libraryDb2DataSet1.Books' table. You can move, or remove it, as needed.
+            this.booksTableAdapter3.Fill(this.libraryDb2DataSet1.Books);
+            this.booksTableAdapter1.Fill(this.libraryDb2DataSet.Books);
         }
 
         private void fillByToolStripButton_Click(object sender, EventArgs e)

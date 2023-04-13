@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace _12labbib
 {
-    public class Book 
+    public class Sales 
     {
         public int Id { get; set; }
-        public string Title { get; set; }
-        public int Year { get; set; }
-        public string Author { get; set; }
+        public string Date { get; set; }
+        public string Client { get; set; }
+        public int Tovar { get; set; }
+        public int Number { get; set; }
         public int UserId { get; set; }
         public User User { get; set; }
     }

@@ -13,8 +13,11 @@ namespace _12labbib.Migrations
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(nullable: true),
+                    Password = table.Column<string>(nullable: true),
+                    Surname = table.Column<string>(nullable: true),
+                    Profile = table.Column<string>(nullable: true),
                     Email = table.Column<string>(nullable: true),
-                    Password = table.Column<string>(nullable: true)
+                    Phone = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -27,9 +30,10 @@ namespace _12labbib.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Title = table.Column<string>(nullable: true),
-                    Year = table.Column<int>(nullable: false),
-                    Author = table.Column<string>(nullable: true),
+                    Date = table.Column<string>(nullable: true),
+                    Client = table.Column<string>(nullable: true),
+                    Tovar = table.Column<int>(nullable: false),
+                    Number = table.Column<int>(nullable: false),
                     UserId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>

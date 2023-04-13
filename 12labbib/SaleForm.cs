@@ -11,12 +11,12 @@ using System.Windows.Forms;
 
 namespace _12labbib
 {
-    public partial class BookForm : Form
+    public partial class SaleForm : Form
     {
         private readonly AppDbContext _context; 
         private readonly User _user; 
-        public Book Book { get; private set; }
-        public BookForm(AppDbContext context, User user) 
+        public Sales Book { get; private set; }
+        public SaleForm(AppDbContext context, User user) 
         { 
             InitializeComponent();
             _context = new AppDbContext();
@@ -24,11 +24,12 @@ namespace _12labbib
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            var book = new Book 
+            var book = new Sales 
             { 
-                Title = textBox1.Text,
-                Author = textBox2.Text,
-                Year = int.Parse(textBox3.Text),
+                Date = textBox1.Text,
+                Client = textBox2.Text,
+                Tovar = int.Parse(textBox3.Text),
+                Number = int.Parse(textBox4.Text),
                 UserId = _user.Id
             };
             _context.Books.Add(book); 
